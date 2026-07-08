@@ -1,3 +1,4 @@
+import SignatureForm from "../components/SignatureForm";
 import Header from "../components/Header";
 import StatusBar from "../components/StatusBar";
 import Footer from "../components/Footer";
