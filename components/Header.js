@@ -1,14 +1,23 @@
+import SignatureStats from "./SignatureStats";
+
 export default function Header() {
   return (
-    <header className="siteHeader">
-      <a className="brand" href="/">EGYPT WON ARGENTINA</a>
-      <nav>
-        <a href="/case-file">Case File</a>
-        <a href="/evidence">Evidence</a>
-        <a href="/archive">Archive</a>
-        <a href="/mission">Mission</a>
-        <a className="signLink" href="/sign">Sign</a>
-      </nav>
+    <header className="ewaHeader">
+      <div className="ewaTopBar">
+        <span>CASE STATUS <b>● ACTIVE</b></span>
+        <span><SignatureStats compact /></span>
+      </div>
+
+      <div className="ewaNav">
+        <a className="ewaBrand" href="/">Egypt Won Argentina</a>
+
+        <nav>
+          <a href="/case-file">Case</a>
+          <a href="/evidence">Evidence</a>
+          <a href="/updates">Updates</a>
+          <a className="ewaNavSign" href="/sign">Sign</a>
+        </nav>
+      </div>
     </header>
   );
 }
