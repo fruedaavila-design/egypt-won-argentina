@@ -1,7 +1,7 @@
+import Header from "../components/Header";
+import Hero from "../components/Hero";
 import SignatureStats from "../components/SignatureStats";
 import SignatureForm from "../components/SignatureForm";
-import Header from "../components/Header";
-import StatusBar from "../components/StatusBar";
 import Footer from "../components/Footer";
 
 const evidence = [
