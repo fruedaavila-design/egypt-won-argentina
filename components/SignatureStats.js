@@ -1,7 +1,7 @@
 import { supabase } from "../lib/supabaseClient";
 
 export default async function SignatureStats() {
-  const { count } = await supabase
+  const { count: totalSignatures } = await supabase
     .from("signatures")
     .select("*", { count: "exact", head: true });
 
@@ -10,24 +10,14 @@ export default async function SignatureStats() {
     .select("*")
     .limit(5);
 
-  return (
-    <section className="signatureStats">
-      <div>
-        <span>Total verified signatures</span>
-        <strong>{count || 0}</strong>
-      </div>
+  const countryCount = countries?.length || 0;
 
-      <div>
-        <span>Top countries</span>
-        <ul>
-          {(countries || []).map((item) => (
-            <li key={item.country}>
-              <b>{item.country}</b>
-              <em>{item.signatures}</em>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+  return (
+    <>
+      <div><b>{totalSignatures || 0}</b><span>Verified Signatures</span></div>
+      <div><b>{countryCount}</b><span>Countries</span></div>
+      <div><b>ACTIVE</b><span>Case Status</span></div>
+      <div><b>1M</b><span>Objective</span></div>
+    </>
   );
 }
