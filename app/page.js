@@ -1,3 +1,4 @@
+import SignatureStats from "../components/SignatureStats";
 import SignatureForm from "../components/SignatureForm";
 import Header from "../components/Header";
 import StatusBar from "../components/StatusBar";
@@ -39,10 +40,7 @@ export default function Home() {
             <p>Objective: 1,000,000 signatures before the Internet Verdict is formally delivered.</p>
           </div>
           <div className="statsGrid">
-            <div><b>67</b><span>Countries</span></div>
-            <div><b>18</b><span>Evidence Items</span></div>
-            <div><b>ACTIVE</b><span>Status</span></div>
-            <div><b>1M</b><span>Objective</span></div>
+            <SignatureStats />
           </div>
         </section>
 
