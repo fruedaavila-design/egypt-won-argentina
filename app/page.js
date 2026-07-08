@@ -20,16 +20,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="hero">
-          <p className="caseTag">OFFICIAL CASE FILE · EWA-2026-001</p>
-          <h1>EGYPT WON ARGENTINA</h1>
-          <p className="heroText">
-            The official result has been recorded. The Internet respectfully disagrees.
-          </p>
-          <div className="heroButtons">
-            <a href="/sign" className="primaryBtn">Sign The Internet Verdict</a>
-            <a href="/evidence" className="secondaryBtn">Review Evidence</a>
-          </div>
+
         </section>
 
         <section className="missionPanel">
