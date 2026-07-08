@@ -290,4 +290,30 @@ input {
   .fakeMap {
     min-height: 240px;
   }
+  .signatureForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.signatureForm button {
+  grid-column: span 2;
+}
+
+.formMessage {
+  grid-column: span 2;
+  font-weight: 800;
+}
+
+@media (max-width: 780px) {
+  .signatureForm {
+    grid-template-columns: 1fr;
+  }
+
+  .signatureForm button,
+  .formMessage {
+    grid-column: span 1;
+  }
+}
 }
