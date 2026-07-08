@@ -80,11 +80,7 @@ export default function Home() {
         <section className="signPanel">
           <p className="sectionLabel">RECORD YOUR POSITION</p>
           <h2>Sign the Internet Verdict.</h2>
-          <form>
-            <input placeholder="Name" />
-            <input placeholder="Country" />
-            <button type="button">Submit Signature</button>
-          </form>
+          <SignatureForm />
         </section>
 
         <section className="sharePanel">
