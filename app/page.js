@@ -1,98 +1,101 @@
-const videos = [
-  { title: "Possible penalty not reviewed", tag: "VAR", note: "Add YouTube / X / TikTok embed here" },
-  { title: "The decision everyone is debating", tag: "Referee", note: "Add clip here" },
-  { title: "Final minutes controversy", tag: "90+ min", note: "Add clip here" }
+import Header from "../components/Header";
+import StatusBar from "../components/StatusBar";
+import Footer from "../components/Footer";
+
+const evidence = [
+  ["001", "The Match", "Official score recorded. Internet disagreement initiated."],
+  ["002", "VAR Review", "Key decisions collected for public inspection."],
+  ["003", "Visual Evidence", "Clips, angles and disputed moments."],
+  ["004", "AI Responses", "Artificial intelligence enters the case file."],
+  ["005", "Public Testimonies", "Fans submit their verdict worldwide."],
+  ["006", "Argentina Files", "Related controversies under review."]
 ];
 
 export default function Home() {
   return (
-    <main>
-      <section className="hero">
-        <div className="nav">
-          <span>EgyptWonArgentina.com</span>
-          <a href="#sponsor">Sponsor</a>
-        </div>
+    <>
+      <StatusBar />
+      <Header />
 
-        <div className="eyebrow">fan-made internet verdict</div>
-        <h1>EGYPT WON ARGENTINA</h1>
-        <p className="lead">
-          Officially, Argentina won 3–2. But the internet is here to correct history.
-        </p>
-
-        <div className="heroActions">
-          <a className="primary" href="#sign">Correct history</a>
-          <a className="secondary" href="#evidence">Watch evidence</a>
-        </div>
-      </section>
-
-      <section className="verdict">
-        <div>
-          <p className="label">Official result</p>
-          <h2>Argentina 3–2 Egypt</h2>
-        </div>
-        <div>
-          <p className="label">Internet verdict</p>
-          <h2>Egypt 82%</h2>
-          <div className="bar"><span /></div>
-        </div>
-      </section>
-
-      <section id="sign" className="panel split">
-        <div>
-          <p className="label">the movement</p>
-          <h2>Sign the Internet Verdict</h2>
-          <p>
-            Join thousands of football fans saying the same thing: the score was official,
-            but the story was different.
+      <main>
+        <section className="hero">
+          <p className="caseTag">OFFICIAL CASE FILE · EWA-2026-001</p>
+          <h1>EGYPT WON ARGENTINA</h1>
+          <p className="heroText">
+            The official result has been recorded. The Internet respectfully disagrees.
           </p>
-        </div>
-        <form>
-          <input placeholder="Name" />
-          <input placeholder="Country" />
-          <input placeholder="Email (optional)" />
-          <textarea placeholder="Your message to football history" />
-          <button type="button">Sign now</button>
-        </form>
-      </section>
+          <div className="heroButtons">
+            <a href="/sign" className="primaryBtn">Sign The Internet Verdict</a>
+            <a href="/evidence" className="secondaryBtn">Review Evidence</a>
+          </div>
+        </section>
 
-      <section id="evidence" className="panel">
-        <p className="label">watch the evidence</p>
-        <h2>The controversial moments</h2>
-        <div className="videoGrid">
-          {videos.map((v) => (
-            <article className="videoCard" key={v.title}>
-              <span>{v.tag}</span>
-              <h3>{v.title}</h3>
-              <p>{v.note}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+        <section className="missionPanel">
+          <div>
+            <p className="sectionLabel">MISSION PROGRESS</p>
+            <h2>24,381 verified signatures</h2>
+            <div className="progress"><span /></div>
+            <p>Objective: 1,000,000 signatures before the Internet Verdict is formally delivered.</p>
+          </div>
+          <div className="statsGrid">
+            <div><b>67</b><span>Countries</span></div>
+            <div><b>18</b><span>Evidence Items</span></div>
+            <div><b>ACTIVE</b><span>Status</span></div>
+            <div><b>1M</b><span>Objective</span></div>
+          </div>
+        </section>
 
-      <section className="panel timeline">
-        <p className="label">match timeline</p>
-        <h2>Why people are still talking</h2>
-        <div className="item"><b>Minute 34</b><span>Debated contact inside the box.</span></div>
-        <div className="item"><b>Minute 67</b><span>VAR decision sparks online debate.</span></div>
-        <div className="item"><b>90+4</b><span>Final whistle. Internet chaos begins.</span></div>
-      </section>
+        <section className="gridSection">
+          <div className="sectionHead">
+            <p className="sectionLabel">GLOBAL CONSENSUS</p>
+            <h2>The world is recording its position.</h2>
+          </div>
+          <div className="mapBox">
+            <div className="fakeMap">GLOBAL CONSENSUS MAP</div>
+            <div className="countryList">
+              <h3>Top Supporting Countries</h3>
+              <p>Egypt · Spain · Mexico · USA · Brazil · Argentina</p>
+              <small>Latest signature: Mexico · 2 minutes ago</small>
+            </div>
+          </div>
+        </section>
 
-      <section className="quotes">
-        <blockquote>“Argentina won the score. Egypt won the people.”</blockquote>
-        <blockquote>“Official football ended. Internet football begins.”</blockquote>
-        <blockquote>“We all saw it.”</blockquote>
-      </section>
+        <section className="gridSection">
+          <div className="sectionHead">
+            <p className="sectionLabel">CASE EVIDENCE</p>
+            <h2>Six items currently under public review.</h2>
+          </div>
+          <div className="evidenceGrid">
+            {evidence.map(([id, title, text]) => (
+              <a href="/evidence" className="evidenceCard" key={id}>
+                <span>Evidence #{id}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </a>
+            ))}
+          </div>
+        </section>
 
-      <section id="sponsor" className="sponsor">
-        <p className="label">brand space</p>
-        <h2>Sponsor the internet’s loudest football debate.</h2>
-        <p>Promoted slots, video sponsorships and social posts available if this catches fire.</p>
-        <a href="mailto:sponsor@egyptwonargentina.com">Contact sponsors</a>
-      </section>
+        <section className="signPanel">
+          <p className="sectionLabel">RECORD YOUR POSITION</p>
+          <h2>Sign the Internet Verdict.</h2>
+          <form>
+            <input placeholder="Name" />
+            <input placeholder="Country" />
+            <button type="button">Submit Signature</button>
+          </form>
+        </section>
 
-      <footer>
-        Fan-made satirical project. Not affiliated with FIFA, Egypt, Argentina or any official organization.
-      </footer>
-    </main>
+        <section className="sharePanel">
+          <h2>Help the Internet reach one million signatures.</h2>
+          <div>
+            <a href="https://twitter.com/intent/tweet?text=Egypt%20Won%20Argentina.%20The%20Internet%20respectfully%20disagrees.%20https%3A%2F%2Fegyptwonargentina.com">Share on X</a>
+            <a href="https://wa.me/?text=Egypt%20Won%20Argentina.%20The%20Internet%20respectfully%20disagrees.%20https%3A%2F%2Fegyptwonargentina.com">WhatsApp</a>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }
