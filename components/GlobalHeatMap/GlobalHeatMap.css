@@ -1,0 +1,145 @@
+.globalHeatMap {
+  padding: 104px 0;
+  border-bottom: 1px solid var(--text);
+}
+
+.globalHeatIntro {
+  display: grid;
+  grid-template-columns: .32fr 1fr;
+  gap: 32px;
+  border-top: 1px solid var(--text);
+  padding-top: 18px;
+  margin-bottom: 48px;
+}
+
+.globalHeatIntro p {
+  margin: 0;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.globalHeatIntro h2 {
+  margin: 0;
+  max-width: 880px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(44px, 6vw, 104px);
+  line-height: .86;
+  letter-spacing: -.06em;
+  font-weight: 400;
+}
+
+.heatMapLayout {
+  display: grid;
+  grid-template-columns: 1.45fr .55fr;
+  gap: 32px;
+}
+
+.heatMapVisual {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid var(--text);
+  background:
+    radial-gradient(circle at 50% 40%, rgba(153,27,27,.18), transparent 18%),
+    radial-gradient(circle at 34% 47%, rgba(153,27,27,.10), transparent 16%),
+    radial-gradient(circle at 66% 48%, rgba(153,27,27,.10), transparent 16%),
+    #f1f1ed;
+  overflow: hidden;
+}
+
+.heatMapVisual::before {
+  content: "WORLD MAP COMING LIVE";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(52px, 8vw, 120px);
+  line-height: .8;
+  text-align: center;
+  letter-spacing: -.06em;
+  color: rgba(17,17,17,.10);
+}
+
+.heatDot {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(153,27,27,.12);
+  animation: pulse 2.4s infinite;
+}
+
+.dot1 { left: 29%; top: 48%; }
+.dot2 { left: 47%; top: 42%; animation-delay: .3s; }
+.dot3 { left: 57%; top: 45%; animation-delay: .6s; }
+.dot4 { left: 38%; top: 55%; animation-delay: .9s; }
+.dot5 { left: 71%; top: 50%; animation-delay: 1.2s; }
+
+.mapLabel {
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+.heatMapStats {
+  border-top: 1px solid var(--text);
+}
+
+.heatMapStats > div {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.heatMapStats span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.heatMapStats b {
+  font-size: 24px;
+}
+
+.heatMapStats ul {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+}
+
+.heatMapStats li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: .65; }
+  50% { transform: scale(1.18); opacity: 1; }
+  100% { transform: scale(1); opacity: .65; }
+}
+
+@media (max-width: 900px) {
+  .globalHeatIntro,
+  .heatMapLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .heatMapVisual {
+    min-height: 360px;
+  }
+}

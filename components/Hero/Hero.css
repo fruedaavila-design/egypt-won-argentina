@@ -1,0 +1,101 @@
+.ewaHero {
+  min-height: 430px;
+  display: grid;
+  grid-template-columns: .9fr 1.2fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 34px 48px 38px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(237,234,226,.95), rgba(237,234,226,.64)),
+    radial-gradient(circle at 78% 45%, rgba(17,17,17,.18), transparent 33%);
+}
+
+.ewaCaseLabel {
+  align-self: start;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+}
+
+.ewaCaseLabel::after {
+  content: "PUBLIC RECORD";
+  display: block;
+  width: fit-content;
+  margin-top: 42px;
+  padding: 16px 22px;
+  border: 2px solid rgba(17,17,17,.22);
+  transform: rotate(-8deg);
+  color: rgba(17,17,17,.35);
+  font-size: 17px;
+  letter-spacing: .08em;
+}
+
+.ewaHero h1 {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: clamp(70px, 8vw, 132px);
+  line-height: .82;
+  letter-spacing: -.065em;
+  font-weight: 950;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ewaHero h1 span {
+  display: block;
+  color: var(--accent);
+  font-style: normal;
+}
+
+.ewaHeroSubtitle {
+  max-width: 300px;
+  margin: 0 0 8px;
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ewaHeroSmall {
+  color: var(--accent);
+  max-width: 300px;
+  margin: 0 0 26px;
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: .95;
+  letter-spacing: -.03em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ewaHeroLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  width: fit-content;
+  padding: 18px 28px;
+  border: 1px solid var(--line);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .ewaHero {
+    grid-template-columns: 1fr;
+    padding: 42px 22px;
+  }
+
+  .ewaHero h1 {
+    text-align: left;
+  }
+
+  .ewaCaseLabel::after {
+    display: none;
+  }
+}

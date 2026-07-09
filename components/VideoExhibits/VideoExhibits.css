@@ -1,0 +1,225 @@
+.ewaVideoExhibits {
+  padding: 104px 0;
+  border-bottom: 1px solid var(--text);
+}
+
+.ewaExhibitMain {
+  border-top: 1px solid var(--text);
+  border-bottom: 1px solid var(--text);
+  padding: 0 0 38px;
+}
+
+.ewaExhibitHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.ewaExhibitHeader span:last-child {
+  color: var(--muted);
+}
+
+.ewaExhibitVideo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #111;
+  border-left: 1px solid var(--text);
+  border-right: 1px solid var(--text);
+}
+
+.ewaExhibitCopy {
+  display: grid;
+  grid-template-columns: 1fr .72fr;
+  gap: 54px;
+  padding: 34px 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ewaExhibitCopy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.ewaExhibitCopy > div > p {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.ewaExhibitCopy h2 {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(62px, 9vw, 150px);
+  line-height: .78;
+  letter-spacing: -.07em;
+  font-weight: 400;
+}
+
+.ewaExhibitData {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ewaExhibitData div,
+.ewaExhibitData a {
+  padding: 22px 18px;
+  border-right: 1px solid var(--line);
+}
+
+.ewaExhibitData div:first-child {
+  padding-left: 0;
+}
+
+.ewaExhibitData span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.ewaExhibitData b {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.ewaExhibitData a {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  border-right: 0;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.ewaMoreExhibits {
+  padding-top: 96px;
+}
+
+.ewaSectionIntro {
+  display: grid;
+  grid-template-columns: .32fr 1fr;
+  gap: 32px;
+  margin-bottom: 44px;
+  border-top: 1px solid var(--text);
+  padding-top: 18px;
+}
+
+.ewaSectionIntro p {
+  margin: 0;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.ewaSectionIntro h2 {
+  margin: 0;
+  max-width: 880px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(42px, 6vw, 96px);
+  line-height: .86;
+  letter-spacing: -.06em;
+  font-weight: 400;
+}
+
+.ewaExhibitGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 58px 32px;
+}
+
+.ewaExhibitItem {
+  border-top: 1px solid var(--line);
+}
+
+.ewaExhibitItem .ewaExhibitHeader {
+  border-bottom: 0;
+  padding: 13px 0;
+}
+
+.ewaExhibitItem .ewaExhibitVideo {
+  border: 1px solid var(--line);
+}
+
+.ewaExhibitItem .ewaExhibitCopy {
+  display: block;
+  padding: 20px 0 0;
+  border-bottom: 0;
+}
+
+.ewaExhibitItem .ewaExhibitCopy h2 {
+  font-size: clamp(38px, 4.5vw, 72px);
+  margin-bottom: 12px;
+}
+
+.ewaExhibitItem .ewaExhibitCopy p {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .ewaExhibitCopy,
+  .ewaSectionIntro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .ewaExhibitData {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ewaExhibitData a {
+    justify-content: flex-start;
+  }
+
+  .ewaExhibitGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .ewaVideoExhibits {
+    padding: 72px 0;
+  }
+
+  .ewaExhibitHeader {
+    font-size: 9px;
+    letter-spacing: .14em;
+  }
+
+  .ewaExhibitData {
+    grid-template-columns: 1fr;
+  }
+
+  .ewaExhibitData div,
+  .ewaExhibitData a {
+    border-right: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .ewaMoreExhibits {
+    padding-top: 72px;
+  }
+}
